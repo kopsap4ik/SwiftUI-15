@@ -13,6 +13,7 @@
 		D9A05ACA253831E900E26537 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9A05AC9253831E900E26537 /* Preview Assets.xcassets */; };
 		D9A05AD32538337D00E26537 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D9A05AD22538337D00E26537 /* README.md */; };
 		D9A05AD625383F4800E26537 /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A05AD525383F4800E26537 /* StartButton.swift */; };
+		D9A05ADB2538592400E26537 /* CircleLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A05ADA2538592400E26537 /* CircleLight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D9A05ACB253831E900E26537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9A05AD22538337D00E26537 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D9A05AD525383F4800E26537 /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
+		D9A05ADA2538592400E26537 /* CircleLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleLight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				D9A05AC2253831E900E26537 /* SwiftUI_15App.swift */,
 				D9A05AC4253831E900E26537 /* ContentView.swift */,
 				D9A05AD525383F4800E26537 /* StartButton.swift */,
+				D9A05ADA2538592400E26537 /* CircleLight.swift */,
 				D9A05AC6253831E900E26537 /* Assets.xcassets */,
 				D9A05ACB253831E900E26537 /* Info.plist */,
 				D9A05AC8253831E900E26537 /* Preview Content */,
@@ -147,6 +150,7 @@
 			files = (
 				D9A05AD625383F4800E26537 /* StartButton.swift in Sources */,
 				D9A05AC5253831E900E26537 /* ContentView.swift in Sources */,
+				D9A05ADB2538592400E26537 /* CircleLight.swift in Sources */,
 				D9A05AC3253831E900E26537 /* SwiftUI_15App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

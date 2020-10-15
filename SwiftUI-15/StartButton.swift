@@ -17,6 +17,7 @@ struct StartButton: View {
         }) {
             Text(titleButton)
                 .font(.title)
+                .fontWeight(.bold)
                 .foregroundColor(.white)
                 .padding(.vertical, 3.0)
                 .padding(.horizontal, 15.0)

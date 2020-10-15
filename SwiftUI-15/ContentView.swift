@@ -11,9 +11,21 @@ struct ContentView: View {
     var body: some View {
         
         VStack(content: {
+            CircleLight(color: .red)
+            CircleLight(color: .yellow)
+            CircleLight(color: .green)
+            Spacer()
             StartButton()
         })
-
+        .padding(.vertical, 100)
+        .frame(minWidth: 0,
+               maxWidth: .infinity,
+               minHeight: 0,
+               maxHeight: .infinity
+        )
+        .background(Color.black)
+        .edgesIgnoringSafeArea(.all)
+        
     }
 }
 
