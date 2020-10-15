@@ -7,15 +7,54 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+    
+    @State private var opacityRed = 0.4
+    @State private var opacityYellow = 0.4
+    @State private var opacityGreen = 0.4
+    
+    enum Light { case no, red, yellow, green }
+    @State private var curentLihgt: Light = .no
+    
+    // MARK:  - View
     var body: some View {
         
         VStack(content: {
-            CircleLight(color: .red)
-            CircleLight(color: .yellow)
-            CircleLight(color: .green)
+            CircleLight(color: .red, opacity: opacityRed)
+            CircleLight(color: .yellow, opacity: opacityYellow)
+            CircleLight(color: .green, opacity: opacityGreen)
+
             Spacer()
-            StartButton()
+//            StartButton()
+            
+            Button(
+                action: {
+                    switch curentLihgt {
+                    case .no:
+                        self.curentLihgt = .red
+                        opacityRed = 1.0
+                    case .red:
+                        self.curentLihgt = .yellow
+                        opacityRed = 0.4
+                        opacityYellow = 1.0
+                    case .yellow:
+                        self.curentLihgt = .green
+                        opacityYellow = 0.4
+                        opacityGreen = 1.0
+                    case .green:
+                        self.curentLihgt = .red
+                        opacityGreen = 0.4
+                        opacityRed = 1.0
+                    }
+                },
+
+
+//                action: { nextLight() },
+                label: { Text("Button") }
+            )
+            
+            
         })
         .padding(.vertical, 100)
         .frame(minWidth: 0,
@@ -27,7 +66,31 @@ struct ContentView: View {
         .edgesIgnoringSafeArea(.all)
         
     }
+    
+    // MARK:  - functions
+    
+    func nextLight() {
+        switch curentLihgt {
+        case .no:
+            self.curentLihgt = .red
+            opacityRed = 1.0
+        case .red:
+            self.curentLihgt = .yellow
+            opacityRed = 0.4
+            opacityYellow = 1.0
+        case .yellow:
+            self.curentLihgt = .green
+            opacityYellow = 0.4
+            opacityGreen = 1.0
+        case .green:
+            self.curentLihgt = .red
+            opacityGreen = 0.4
+            opacityRed = 1.0
+        }
+    }
 }
+
+// MARK:  - Preview
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
