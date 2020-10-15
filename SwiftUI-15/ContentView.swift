@@ -29,28 +29,7 @@ struct ContentView: View {
 //            StartButton()
             
             Button(
-                action: {
-                    switch curentLihgt {
-                    case .no:
-                        self.curentLihgt = .red
-                        opacityRed = 1.0
-                    case .red:
-                        self.curentLihgt = .yellow
-                        opacityRed = 0.4
-                        opacityYellow = 1.0
-                    case .yellow:
-                        self.curentLihgt = .green
-                        opacityYellow = 0.4
-                        opacityGreen = 1.0
-                    case .green:
-                        self.curentLihgt = .red
-                        opacityGreen = 0.4
-                        opacityRed = 1.0
-                    }
-                },
-
-
-//                action: { nextLight() },
+                action: { nextLight() },
                 label: { Text("Button") }
             )
             
