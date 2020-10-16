@@ -34,7 +34,7 @@ struct CircleLight: View {
 // MARK:  - Preview
 
 struct CircleLights_Previews: PreviewProvider {
-    @State static var opacityPrev = 0.4 // 2 вариант - обявление переменной для @Binding
+//    @State static var opacityPrev = 0.4 // 2 вариант - обявление переменной для @Binding
     
     static var previews: some View {
         CircleLight(color: .cyan, opacity: 0.4)
