@@ -17,6 +17,8 @@ struct ContentView: View {
     enum Light { case no, red, yellow, green }
     @State private var curentLihgt: Light = .no
     
+    @State private var titleButton = "START"
+    
     // MARK:  - View
     var body: some View {
         
@@ -26,12 +28,13 @@ struct ContentView: View {
             CircleLight(color: .green, opacity: opacityGreen)
 
             Spacer()
-//            StartButton()
             
-            Button(
-                action: { nextLight() },
-                label: { Text("Button") }
-            )
+            Button(action: {
+                titleButton = "NEXT"
+                nextLight()
+            }) {
+                Text(titleButton)
+            }.buttonStyle(StartButtonStyle())
             
             
         })
@@ -48,7 +51,7 @@ struct ContentView: View {
     
     // MARK:  - functions
     
-    func nextLight() {
+    private func nextLight() {
         switch curentLihgt {
         case .no:
             self.curentLihgt = .red

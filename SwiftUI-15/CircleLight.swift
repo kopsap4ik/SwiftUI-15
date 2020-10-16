@@ -10,8 +10,16 @@ import SwiftUI
 struct CircleLight: View {
     
     let color: UIColor
-//    @Binding var opacity: Double
     var opacity: Double
+    
+    var radiusShadow: Double {
+        var radius = 0.0
+        
+        if opacity == 1 {
+            radius = 10.0
+        }
+        return radius
+    }
     
     var body: some View {
         Color(color)
@@ -19,11 +27,11 @@ struct CircleLight: View {
             .opacity(opacity)
             .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
             .overlay(Circle().stroke(Color.white, lineWidth: 3)) //обводка
-//            .shadow(radius: 10)
+            .shadow(color: Color(color), radius: CGFloat(radiusShadow))
     }
 }
 
-enum Light { case no, red, yellow, green }
+// MARK:  - Preview
 
 struct CircleLights_Previews: PreviewProvider {
     @State static var opacityPrev = 0.4 // 2 вариант - обявление переменной для @Binding
